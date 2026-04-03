@@ -9,4 +9,5 @@ models:
         tests:
           - not_null
           - unique
+          - primary_key_test
           
