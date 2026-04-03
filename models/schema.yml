@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_data_circle
+    tables:
+      - name: parcel
+        identifier: raw_cc_parcel
+        description: Includes information about parcel
+        columns:
+          - name: Parcel_id
+            description: Unique of the parcel
+            tests:
+              - not_null
+              - unique
+          - name: Transporter
+            description: carrier name of the transporter
+            tests:
+              - not_null
+      - name: parcel_product
+        identifier: raw_cc_parcel_product
+        description: Details of the product in a parcel
+        columns:
+          - name: Parcel_id
+            description: parcel id
+            tests:
+              - not_null
+              
+              
+              
